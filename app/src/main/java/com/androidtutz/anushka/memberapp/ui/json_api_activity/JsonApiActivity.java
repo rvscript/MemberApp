@@ -34,7 +34,10 @@ public class JsonApiActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private RecyclerView mRecyclerView;
     private RecyclerView.LayoutManager layoutManager;
-    private JsonAdapterView adapter;
+
+    //RecyclerView.Adapter
+    @Inject
+    JsonAdapterView adapter;
 
     //Dagger2 injection of type
     @Inject
@@ -99,7 +102,7 @@ public class JsonApiActivity extends AppCompatActivity
                         repos.add(ghr);
                     }
 
-                    adapter = new JsonAdapterView(repos);
+                    adapter.setGitHubRepos(repos);
                     mRecyclerView.setAdapter(adapter);
                 } else {
                     Timber.e("Error in Response");

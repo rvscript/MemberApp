@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.androidtutz.anushka.memberapp.di.ApiModule;
 import com.androidtutz.anushka.memberapp.di.MemberDataModule;
+import com.androidtutz.anushka.memberapp.di.ViewModule;
 import com.androidtutz.anushka.memberapp.ui.json_api_activity.DaggerJsonApiComponent;
 import com.androidtutz.anushka.memberapp.ui.json_api_activity.JsonApiComponent;
 import com.androidtutz.anushka.memberapp.ui.main_activity.DaggerMainActivityComponent;
@@ -40,6 +41,7 @@ public class MemberApplication extends Application{
          */
         jsonApiComponent = DaggerJsonApiComponent.builder()
                 .apiModule(new ApiModule())
+                .viewModule(new ViewModule())
                 .build();
     }
 

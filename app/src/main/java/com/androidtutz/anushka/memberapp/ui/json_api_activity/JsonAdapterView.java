@@ -13,12 +13,20 @@ import com.androidtutz.anushka.memberapp.model.github_model.GitHubRepo;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
+import dagger.Provides;
+
 public class JsonAdapterView extends RecyclerView.Adapter<JsonAdapterView.JsonViewHolder>{
 
     private List<GitHubRepo> gitHubRepos = new ArrayList<>();
+    @Inject
+    public JsonAdapterView() {
+    }
 
-    public JsonAdapterView(List<GitHubRepo> repos) {
-        gitHubRepos.addAll(repos);
+    public List<GitHubRepo> setGitHubRepos(List<GitHubRepo> repos){
+        this.gitHubRepos.addAll(repos);
+        return gitHubRepos;
     }
 
     @Override

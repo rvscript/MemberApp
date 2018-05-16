@@ -1,72 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.main_activity.MainActivity">
 
-    <TextView
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
-        android:text = "@string/title"
-        android:id = "@+id/tvTitle"
-        android:textAlignment="center"
-        android:textColor = "#011a5c"
-        android:layout_marginTop="20dp"
-        android:textSize = "40dp" />
-
-
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ivMember"
-        android:src="@drawable/member"
-        android:layout_below="@+id/tvTitle"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true" />
-
-
-
-
-
-    <EditText
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/enter_number"
-        android:id="@+id/etMemberId"
-        android:layout_below="@+id/ivMember"
-        android:textAlignment="center"
-        android:textColor = "#011a5c"
-        android:layout_marginTop="20dp"
-        android:textSize="30dp" />
+        android:layout_height="match_parent"
+        android:paddingBottom="50dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/title"
+            android:textAlignment="center"
+            android:textColor="#011a5c"
+            android:textSize="40dp" />
 
 
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/submit"
-        android:id="@+id/btnSubmit"
-        android:layout_below="@+id/etMemberId"
-        android:textAlignment="center"
-        android:textColor = "#011a5c"
-        android:layout_marginTop="20dp"
-        android:textSize="30dp" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/jsonActivity"
-        android:id="@+id/btnJsonActivity"
-        android:layout_below="@+id/btnSubmit"
-        android:textAlignment="center"
-        android:textColor = "#011a5c"
-        android:layout_marginTop="20dp"
-        android:textSize="30dp" />
+        <ImageView
+            android:id="@+id/ivMember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/member" />
 
 
+        <EditText
+            android:id="@+id/etMemberId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivMember"
+            android:layout_marginTop="20dp"
+            android:hint="@string/enter_number"
+            android:textAlignment="center"
+            android:textColor="#011a5c"
+            android:textSize="30dp" />
 
-</RelativeLayout>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etMemberId"
+            android:layout_marginTop="20dp"
+            android:text="@string/submit"
+            android:textAlignment="center"
+            android:textColor="#011a5c"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/btnJsonActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnSubmit"
+            android:layout_marginTop="20dp"
+            android:text="@string/jsonActivity"
+            android:textAlignment="center"
+            android:textColor="#011a5c"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/btnHttp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnSubmit"
+            android:layout_marginTop="20dp"
+            android:text="@string/http_fragment"
+            android:textAlignment="center"
+            android:textColor="#011a5c"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+</ScrollView>

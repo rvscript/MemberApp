@@ -48,10 +48,14 @@ dependencies {
     //OkHttp for interceptors
     implementation 'com.squareup.okhttp3:logging-interceptor:3.8.1'
 
+    //OkHttp
+    implementation 'com.squareup.okhttp3:okhttp:3.9.1'
+
     //Timber for logging
     implementation 'com.jakewharton.timber:timber:4.7.0'
 
     //Butterknife
     implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
 }

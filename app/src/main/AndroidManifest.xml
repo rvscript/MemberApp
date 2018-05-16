@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.androidtutz.anushka.memberapp">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".MemberApplication"
@@ -22,7 +22,12 @@
         <activity
             android:name=".ui.json_api_activity.JsonApiActivity"
             android:label="@string/title_activity_json_api"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.http_activity.HttpActivity"
+            android:label="@string/title_activity_http">
+
+        </activity>
     </application>
 
 </manifest>
